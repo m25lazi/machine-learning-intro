@@ -29,7 +29,7 @@ features_train = features_train[:len(features_train)/100]
 labels_train = labels_train[:len(labels_train)/100] 
 
 from sklearn.svm import SVC
-clf = SVC(C=10.0, kernel='rbf') #(kernel='linear')
+clf = SVC(C=10000.0, kernel='rbf') #(kernel='linear')
 print clf
 
 t0 = time()
@@ -80,6 +80,11 @@ print accuracy;
 # Training time: 0.096 s
 # Prediction time: 0.866 s
 # 0.892491467577
+
+# kernel='rbf', C= 10000.0, With Full set of training data
+# Training time: 113.658 s
+# Prediction time: 10.483 s
+# 0.990898748578
 
 #########################################################
 
